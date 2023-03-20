@@ -1,0 +1,27 @@
+{
+  "name": "frontend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "docker:prod:build": "docker build -t frontend_prod -f Dockerfile.prod .",
+    "docker:prod:run": "docker run -p 8020:80 -it frontend_prod:latest",
+    "docker:dev:run": "docker compose up",
+    "docker:dev:build&run": "docker compose up --build"
+  },
+  "dependencies": {
+    "pinia": "^2.0.32",
+    "vue": "^3.2.47",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vue/test-utils": "^2.3.0",
+    "jsdom": "^21.1.0",
+    "vite": "^4.1.4",
+    "vitest": "^0.29.1"
+  }
+}
