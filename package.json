@@ -8,7 +8,7 @@
     "preview": "vite preview",
     "test:unit": "vitest",
     "docker:prod:build": "docker build -t frontend_prod -f Dockerfile.prod .",
-    "docker:prod:run": "docker run -p 8020:80 -it frontend_prod:latest",
+    "docker:prod:run": "docker run -p 5175:80 -it frontend_prod:latest",
     "docker:dev:run": "docker compose up",
     "docker:dev:build&run": "docker compose up --build"
   },
